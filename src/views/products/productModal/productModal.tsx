@@ -6,10 +6,7 @@ interface ProductModalProps {
   onClose: () => void;
 }
 
-export const ProductModal: React.FC<ProductModalProps> = ({
-  product,
-  onClose,
-}) => {
+const ProductModal: React.FC<ProductModalProps> = ({ product, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
       <div className="bg-white p-4 rounded m-4 max-w-md text-sm flex flex-col gap-2">
@@ -25,3 +22,4 @@ export const ProductModal: React.FC<ProductModalProps> = ({
     </div>
   );
 };
+export default React.memo(ProductModal);
